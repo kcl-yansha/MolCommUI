@@ -135,28 +135,28 @@ void executeThisFunction() {
 
     // Check the the SETTING is always set to DIST before proceeding
     if (strcmp(setting, "DIST") == 0) {
-      Serial.println("I will run now");
+      return runFew();
     }
   }
 
   // Go to the SETTING function
   else if (strcmp(mode, "SETTING") == 0) {
-    Serial.println("I will edit the settings now");
+    return udpateSettings();
   }
 
   // Go to the STOP function
   else if (strcmp(mode, "STOP") == 0) {
-
+    return stopAll();
   }
 
   // Go to the PAUSE function
   else if (strcmp(mode, "PAUSE") == 0) {
-    
+    return pauseRun();
   }
 
   // Go to the RESUME function
   else if (strcmp(mode, "RESUME") == 0) {
-    
+    return runFew();
   }
 
   // Go to the GETID function
