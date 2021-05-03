@@ -119,7 +119,6 @@ void parseData() {
 
   // Communicate back to the computer
   newDataFromPC = true;
-  replyToPC();
 
   // Execute the selected function
   return executeThisFunction();
@@ -133,6 +132,8 @@ void executeThisFunction() {
   // Go to the RUN function
   if (strcmp(mode, "RUN") == 0) {
 
+    replyToPC();
+
     // Check the the SETTING is always set to DIST before proceeding
     if (strcmp(setting, "DIST") == 0) {
       return runFew();
@@ -141,6 +142,7 @@ void executeThisFunction() {
 
   // Go to the SETTING function
   else if (strcmp(mode, "SETTING") == 0) {
+    replyToPC();
     return udpateSettings();
   }
 

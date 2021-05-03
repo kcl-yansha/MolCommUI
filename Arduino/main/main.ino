@@ -29,7 +29,7 @@
 // Define the baud rate of the Arduino
 #define BAUD_RATE 230400
 
-#define DEVICEID "ArduinoSyringePump - #2021-001"
+#define DEVICEID "<ArduinoSyringePump - #2021-002>"
 
 // ---------------
 // Motor variables
@@ -83,6 +83,10 @@ void setup() {
   stepper1.setAcceleration(X_ACCEL);
   stepper2.setAcceleration(Y_ACCEL);
   stepper3.setAcceleration(Z_ACCEL);
+
+  // Set the Arduino as ready
+  Serial.println("<READY>");
+  
 }
 
 // ---------------------------------------------
